@@ -1,0 +1,20 @@
+<div id="test">123</div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+
+<script>
+    $.ajax({
+        url: "http://127.0.0.1:3000/index",
+        type: "get",
+        dataType: "JSON",
+        // headers: {"X-CSRFToken":$.cookie{"csr"}}
+        success:function(data){
+            document.write(data)
+            // di.innerHTML = data
+            console.log(data)
+        }
+        
+    })
+</script>

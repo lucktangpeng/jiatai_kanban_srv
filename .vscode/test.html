@@ -1,0 +1,82 @@
+<div>
+    <canvas id="lineChartCustom1" class="chartjs-render-monitor" width="645" height="322"></canvas>
+    <script src="../node_text/js/charts-custom.js"></script>
+</div>
+<script>
+var LINECHARTEXMPLE   = $('#lineChartCustom1');
+    var lineChartExample = new Chart(LINECHARTEXMPLE, {
+        type: 'line',
+        options: {
+            legend: {labels:{fontColor:"#777", fontSize: 12}},
+            scales: {
+                xAxes: [{
+                    display: false,
+                    gridLines: {
+                        color: 'transparent'
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        max: 60,
+                        min: 0
+                    },
+                    display: true,
+                    gridLines: {
+                        color: 'transparent'
+                    }
+                }]
+            },
+        },
+        data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+                {
+                    label: "Data Set One",
+                    fill: true,
+                    lineTension: 0,
+                    backgroundColor: "rgba(134, 77, 217, 0.88)",
+                    borderColor: "rgba(134, 77, 217, 088)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    borderWidth: 1,
+                    pointBorderColor: "rgba(134, 77, 217, 0.88)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(134, 77, 217, 0.88)",
+                    pointHoverBorderColor: "rgba(134, 77, 217, 0.88)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [0, 60, 17, 40, 30, 22, 30],
+                    spanGaps: false
+                },
+                {
+                    label: "Data Set Two",
+                    fill: true,
+                    lineTension: 0,
+                    backgroundColor: "rgba(98, 98, 98, 0.5)",
+                    borderColor: "rgba(98, 98, 98, 0.5)",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    borderWidth: 1,
+                    pointBorderColor: "rgba(98, 98, 98, 0.5)",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 5,
+                    pointHoverBackgroundColor: "rgba(98, 98, 98, 0.5)",
+                    pointHoverBorderColor: "rgba(98, 98, 98, 0.5)",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 1,
+                    pointHitRadius: 10,
+                    data: [0, 30, 22, 20, 35, 25, 50],
+                    spanGaps: false
+                }
+            ]
+        }
+    });
+</script>
